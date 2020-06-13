@@ -16,7 +16,7 @@ $( function() {
     var deck = Array.from({length: NUM_CARDS}, (x,i) => i);
     deck = shuffle(deck);
 
-    $("button").click( function( event ) {
+    $("#add-card").click( function( event ) {
       if(current_card_num < 1){
         return;
       }
@@ -35,8 +35,16 @@ $( function() {
     } );
 
     $("#table").on("click", ".card", function(e) {
-      $(e.target).parents(".card").addBack().remove();
+      $("#hand").append($(e.target).parents(".card"));
     });
+
+    $("#hand").on("click", ".card", function(e) {
+      $("#table").append($(e.target).parents(".card"));
+    });
+
+    $("#submit-set").click( function( event ) {
+      $("#hand").empty();
+    } );
 } );
 
 /**

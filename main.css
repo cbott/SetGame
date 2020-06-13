@@ -29,4 +29,25 @@
 #table {
     padding: 10px;
     width: 800px;
+    float: left;
+}
+
+#hand {
+    width: 500px;
+    height: 190px;
+    border: 3px dashed green;
+    border-radius: 5px;
+}
+
+#hand-area {
+    text-align: center;
+    float: right;
+}
+
+.contents {
+    display: inline-block;
+}
+
+#submit-set {
+    margin: 10px;
 }
