@@ -28,9 +28,9 @@ $( function() {
       color  = Math.trunc(current_card / 3) % 3;
       number = Math.trunc(current_card) % 3;
       image_name = SHAPES[shape] + "_" + FILLS[fill] + "_" + COLORS[color];
-      image_tag = '<img src="images/' + image_name + '.png"><br>';
+      image_tag = '<img class="shape" src="images/' + image_name + '.png"><br>';
       image_tag = image_tag.repeat(number + 1);
-      card = '<div class="card">' + image_tag + '</div>';
+      card = '<div class="card"><div class="center"><div class="shape-container">' + image_tag + '</div></div></div>';
       $("#table").append(card);
     } );
 
