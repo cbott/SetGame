@@ -32,7 +32,7 @@ $( function() {
       image_tag = image_tag.repeat(number + 1);
       card = '<div class="card"><div class="center"><div class="shape-container">' + image_tag + '</div></div></div>';
       $("#table").append(card);
-    } );
+    });
 
     $("#table").on("click", ".card", function(e) {
       $("#hand").append($(e.target).parents(".card"));
@@ -44,7 +44,7 @@ $( function() {
 
     $("#submit-set").click( function( event ) {
       $("#hand").empty();
-    } );
+    });
 } );
 
 /**
